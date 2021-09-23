@@ -7,7 +7,7 @@ var student_list=[];
       var txt=req.responseText;
       var line=txt.split("\n");
 
-      for(let i=0;i<line.length-1;i++){
+      for(let i=0;i<line.length;i++){
         var v=line[i].split(",");
         student_list[i] = v;
       }
