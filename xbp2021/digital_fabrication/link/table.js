@@ -6,7 +6,6 @@ var student_list=[];
     req.onload = function ( event ) {
       var txt=req.responseText;
       var line=txt.split("\n");
-      window.alert(line);
       for(let i=0;i<line.length;i++){
         var v=line[i].split(",");
         student_list[i] = v;
