@@ -28,11 +28,15 @@
   
             代表的なマイコンボード
             <ul>
-                <li><a href="https://www.amazon.co.jp/s?k=ESP32&i=industrial&__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&ref=nb_sb_noss">ESP32</a>(wifi, Bluetooth)</li>
-                <li><a href="https://www.amazon.co.jp/s?k=m5stack">M5Stack</a>(wifi, Bluetooth,LCD)</li>
-                <li><a href="https://www.amazon.co.jp/s?k=M5Stick&__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&ref=nb_sb_noss">M5Stick</a>(wifi, Bluetooth,LCD)</li>
-                <li><a href="https://www.amazon.co.jp/s?k=Atom+Matrix&__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&ref=nb_sb_noss">M5 Atom Matrix</a>(wifi, Bluetooth)</li>
-                <li><a href="https://www.amazon.co.jp/s?k=%E3%83%A9%E3%82%BA%E3%83%99%E3%83%AA%E3%83%BC%E3%83%91%E3%82%A4&__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&ref=nb_sb_noss_1">ラズベリーパイ</a>（OS）</li>
+                <li><a href="https://www.amazon.co.jp/s?k=ESP32&i=industrial&__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&ref=nb_sb_noss" target="_blank">ESP32</a>(wifi, Bluetooth)</li>
+                <li><a href="https://www.amazon.co.jp/s?k=m5stack" target="_blank">M5Stack</a>(wifi, Bluetooth,LCD)<br>
+                    <a href="https://techlife.cookpad.com/entry/2019/10/17/110000" target="_blank"> クックパッド例</a> <br>
+                    <a href="https://techlife.cookpad.com/entry/2019/02/04/120000" target="_blank">クックパッドがM5Stackを使ったプロトタイピング:ハッカソンの様子</a><br>
+                    <a href="../../data_fab/images/cookpad_ad.jpeg" target="_blank">クックパッドの人材募集</a>
+                </li>
+                <li><a href="https://www.switch-science.com/catalog/6350/" target="_blank">M5StickC</a>(wifi, Bluetooth,LCD)</li>
+                <li><a href="https://www.amazon.co.jp/s?k=Atom+Matrix&__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&ref=nb_sb_noss" target="_blank">M5 Atom Matrix</a>(wifi, Bluetooth)</li>
+                <li><a href="https://www.amazon.co.jp/s?k=%E3%83%A9%E3%82%BA%E3%83%99%E3%83%AA%E3%83%BC%E3%83%91%E3%82%A4&__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&ref=nb_sb_noss_1" target="_blank">ラズベリーパイ</a>（OS）</li>
             </ul>
 
     <!-- ■Arduino IEDでESP32を使う場合
@@ -78,26 +82,35 @@
         </div>        
     </div>
 
-    <h2>Work</h2>
-    <h3>ArduinoIDEでM5StickCの設定</h3>
+    <h2>Work(ネットワークとデバイス)</h2>
+    <h3>1)ArduinoIDEでM5StickCの設定</h3>
     <div>
         <a href="https://qiita.com/doyodoyo/private/bc64e8dd3ab60bb36bbe" target="_blank">ここ</a>を参考にボードやライブラリを設定
     </div>
 
-    <h3>doyolabIoTライブラリのインストール</h3>
+    <h3>2)doyolabIoTライブラリのインストール</h3>
     <ol>
         <li><a href="https://doyolab.net/appli/iot/data/doyolab_IoT.zip">ライブラリのzipファイル</a>をダウンロード</li>
         <li>Arduino IDEで[スケッチ]→[ライブラリをインクルード]→[ZIP形式のライブラリをインストール]でダウンロードしたzipファイルを選択する</li>
         <li>Arduino IDEで[ファイル]→[スケッチ例]からdoyolabIoTのスケッチ例を開くことができます</li>
     </ol>
-    <h3>サーバーにデータを送る</h3>
+    <h3>3)ネットワークを介したデータ送信</h3>
     <div>
         <a href="https://qiita.com/doyodoyo/private/d95b4ab800d9b80ef84a" target="_blank">ここ</a>を参考に明るさを測定し、IoTサーバーに送信してみましょう。
     </div>
-    <h3>遠隔でデバイスを操作する</h3>
+    <h3>4)デバイス同士のコミュニケーション</h3>
     <div>
         二人ペアになって<br>
     <a href="https://qiita.com/doyodoyo/private/6f9cadb6c3ec65b3713b" target="_blank">ここ</a>を参考に遠隔スイッチを作ってみましょう。
+    </div>
+
+    <h3>授業が終わったら</h3>
+    <div>
+        M5StickCは他の学生も使うので、自分のプログラムを書き込んだままにしておくと、サーバーに自分のアカウントでデータが書き込まれる可能性があるので、
+        <br>
+        Arduino IDEで[ファイル]→[スケッチ例]→[M5StichC]→[Basic]→[HelloWorld]のスケッチ例を開き、書き込んでから返却しましょう。
+
+
     </div>
 <br>
 <br>

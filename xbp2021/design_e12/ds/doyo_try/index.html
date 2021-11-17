@@ -15,7 +15,8 @@
     <div>
         pandas、matplotlibは詳しくないので、学生気分に戻って山崎先生のデータサイエンスの課題をやってみました。<br>
         学生が住むための物件探しを目的として、おすすめの駅という観点から分析を進めていきます。<br>
-        基本的には家賃、通学時間、バスの利用有無が大きな決定要素と考えられるので、それらを中心に考えていきます。<br>
+        基本的には家賃、通学時間、バスの利用有無が大きな決定要素と考えられるので、それらを中心に考えていきます。<br><br>
+        (※2021/11/15データの絞り込みに間違いがあったのでプログラムと分析結果の数字を修正しました。)
     </div>
     <h2>ワンルーム家賃相場感</h2>
     <div>
@@ -31,25 +32,25 @@
     </div>
     <h2>家賃を絞って通学時間を見てみる</h2>
     <div>
-        ワンルーム（63308件）から家賃を3〜6万円に絞ると、24288件になりました。<br>
+        ワンルーム（63308件）から家賃を3〜6万円に絞ると、9868件になりました。<br>
         <img src="./input1.png" width="40%"><br>
-        この24288件を対象に通学時間を概観してみると、40分前後の物件が多いようです。<br>
+        この9868件を対象に通学時間を概観してみると、40分前後の物件が多いようです。<br>
         30分程度の物件もかなり存在することから、みなとみらいは都会ですが学生の一人暮らし環境としては悪く無いように感じます。<br>
         <img src="./Figure_3.png" width="40%"><br>
     </div>
     <h2>通学時間、バスの有無でも物件を絞る→おすすめ駅を抽出</h2>
     
     <div>
-        とりあえず、通学時間50分という条件でさらに物件を絞り込むと、15910件になりました。<br>
+        とりあえず、通学時間50分という条件でさらに物件を絞り込むと、7472件になりました。<br>
         <img src="./input1-2.png" width="40%"><br>
-        さらに、、バスは利用せずという条件にすると14684件にまで絞り込まれます。<br>
+        さらに、、バスは利用せずという条件にすると7026件にまで絞り込まれます。<br>
         <img src="./input1-3.png" width="40%"><br>
         条件に合致する物件が多い駅Top10を「おすすめ駅」としました。<br>
         おすすめ駅とそれぞれの物件数は下記の図の通りです。<br>
         <img src="./rec.png" width="30%"><br>
         下のヒストグラムはおすすめ駅の家賃制限（3〜6万円）内の物件の分布です。<br>
-        おすすめ駅の家賃分布を見てみると、保土ヶ谷、弘明寺、白楽には４万円以下の物件が結構ありそうです。<br>
-        日吉、元住吉、武蔵小杉は5〜6万円の物件が中心のようです。<br>
+        おすすめ駅の家賃分布を見てみると、保土ヶ谷、弘明寺、白楽、妙蓮寺には４万円以下の物件が結構ありそうです。<br>
+        日吉、元住吉、鶴見、京急鶴見は5〜6万円の物件が中心のようです。<br>
         <img src="./Figure_4.png" width="80%"><br>
     </div>
     <h2>物件の表示</h2>
@@ -67,30 +68,25 @@
     <div>
         <code>
             <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#F7F7F7;color:#000;">
-            <li>import pandas as pd  # データ分析に用いるライブラリ</li>
-            <li>import matplotlib.pyplot as plt  # グラフ表示に用いるライブラリ</li>
-            <li></li>
-            <li>pd.set_option('display.unicode.east_asian_width', True)  # 表示のずれを少し緩和</li>
-            <li>plt.rcParams['font.family'] = 'IPAexGothic'  # グラフ表示におけるフォントの指定</li>
-            <li></li>
+            <li>import pandas as pd # データ分析に用いるライブラリ</li>
+            <li>import matplotlib.pyplot as plt # グラフ表示に用いるライブラリ</li>
+            <li>pd.set_option('display.unicode.east_asian_width', True) # 表示のずれを少し緩和</li>
+            <li>plt.rcParams['font.family'] = 'IPAexGothic' # グラフ表示におけるフォントの指定</li>
             <li>data_path = "./data.csv"</li>
             <li>df_data = pd.read_csv(data_path, encoding="utf-8-sig")</li>
-            <li></li>
             <li># print(df_data["合計時間"].describe())</li>
             <li># print(df_data.groupby(["間取り"]).count())</li>
             <li>print("物件数", len(df_data), "件")</li>
-            <li></li>
             <li># ワンルーム全体の相場を調べる---------------------------------------</li>
             <li>mask=(df_data["間取り"]=="ワンルーム")</li>
             <li>df_selected_roomtype=df_data[mask]</li>
             <li>df_selected_roomtype.loc[:, "家賃"].hist(range=(0,20),bins=40)</li>
-            <li>plt.xlabel("ワンルーム家賃(万円)")  # 横軸のラベル</li>
-            <li>plt.ylabel("件数")  # 縦軸のラベル</li>
+            <li>plt.xlabel("ワンルーム家賃(万円)") # 横軸のラベル</li>
+            <li>plt.ylabel("件数") # 縦軸のラベル</li>
             <li>plt.xlim(0, 16)</li>
-            <li>plt.title("ワンルーム家賃のヒストグラム")  # グラフのタイトル</li>
+            <li>plt.title("ワンルーム家賃のヒストグラム") # グラフのタイトル</li>
             <li>plt.show()</li>
             <li># -------------------------------------------------------------</li>
-            <li></li>
             <li># 路線毎のワンルーム相場 -------------------------------------</li>
             <li>#エラーが出たので山崎先生に教えてもらいました。</li>
             <li>axes = df_selected_roomtype.loc[:, "家賃"].hist(by=df_selected_roomtype.loc[:, "路線"],</li>
@@ -98,43 +94,37 @@
             <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;figsize=(14, 7),</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sharex=True, sharey=True)</li>
             <li>for ax in axes.reshape(-1):</li>
-            <li>&nbsp;&nbsp;&nbsp;&nbsp;ax.grid(b=True)  # グリッドを表示</li>
-            <li>&nbsp;&nbsp;&nbsp;&nbsp;ax.set_xlabel("家賃(万円)")  # 横軸のラベル</li>
-            <li>&nbsp;&nbsp;&nbsp;&nbsp;ax.set_ylabel("件数")  # 縦軸のラベル</li>
-            <li>&nbsp;&nbsp;&nbsp;&nbsp;# ax.set_ylim(0, 120)  # 縦軸の目盛りの最小値と最大値の指定</li>
-            <li>plt.suptitle("路線ごとのワンルーム家賃のヒストグラム")  # グラフ全体のタイトル</li>
-            <li>plt.subplots_adjust(top=0.92,  # グラフ位置の微調整</li>
-            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hspace=0.3)  # グラフ間の微調整</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;ax.grid(b=True) # グリッドを表示</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;ax.set_xlabel("家賃(万円)") # 横軸のラベル</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;ax.set_ylabel("件数") # 縦軸のラベル</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;# ax.set_ylim(0, 120) # 縦軸の目盛りの最小値と最大値の指定</li>
+            <li>plt.suptitle("路線ごとのワンルーム家賃のヒストグラム") # グラフ全体のタイトル</li>
+            <li>plt.subplots_adjust(top=0.92, # グラフ位置の微調整</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hspace=0.3) # グラフ間の微調整</li>
             <li>plt.show()</li>
             <li># ------------------------------------------------------</li>
-            <li></li>
-            <li></li>
             <li># 希望家賃(万)</li>
             <li>rent_upper = int(input("希望家賃の上限は？(万円)"))</li>
             <li>rent_lower = int(input("希望家賃の下限は？(万円)"))</li>
-            <li></li>
             <li># 家賃で絞り込む</li>
-            <li>mask = (df_data['家賃'] &lt;= rent_upper) &amp; (df_data['家賃'] &gt;= rent_lower)</li>
+            <li>mask = (df_selected_roomtype['家賃'] &lt;= rent_upper) &amp; (df_selected_roomtype['家賃'] &gt;= rent_lower)</li>
             <li># 絞った内容ををfilter_dfに入れる</li>
-            <li>filter_df = df_data[mask]</li>
+            <li>filter_df = df_selected_roomtype[mask]</li>
             <li>print("家賃で絞り込んだ結果", len(filter_df), "件")</li>
-            <li></li>
             <li># 通学時間---------------------------------------------------</li>
             <li>filter_df.loc[:, "合計時間"].hist(range=(0,120),bins=120)</li>
-            <li>plt.xlabel("通学時間(分)")  # 横軸のラベル</li>
-            <li>plt.ylabel("件数")  # 縦軸のラベル</li>
+            <li>plt.xlabel("通学時間(分)") # 横軸のラベル</li>
+            <li>plt.ylabel("件数") # 縦軸のラベル</li>
             <li>plt.xlim(0, 120)</li>
-            <li>plt.title(str(rent_lower) +"-" + str(rent_upper)+"万円のワンルーム：通学時間ヒストグラム")  # グラフのタイトル</li>
+            <li>plt.title(str(rent_lower) +"-" + str(rent_upper)+"万円のワンルーム：通学時間ヒストグラム") # グラフのタイトル</li>
             <li>plt.show()</li>
             <li>#----------------------------------------------------------</li>
-            <li></li>
             <li># # 通学時間（分）</li>
             <li>commuting_time = float(input("希望通学時間上限は?(分)"))</li>
             <li>mask = (filter_df['合計時間'] &lt;= commuting_time)</li>
             <li># filter_dfをさらに合計時間で絞り込む(filter_dfを上書き)</li>
             <li>filter_df = filter_df[mask]</li>
             <li>print("家賃,通学時間で絞り込んだ結果", len(filter_df), "件")</li>
-            <li></li>
             <li># バスは使いますか?</li>
             <li>bus = input('バスは使ってもいいですか？　y or n')</li>
             <li>if bus == 'n':</li>
@@ -147,25 +137,20 @@
             <li># filter_dfをさらにバス有無で絞り込み</li>
             <li>filter_df = filter_df[mask]</li>
             <li>print("家賃,通学時間、バス有無で絞り込んだ結果", len(filter_df), "件")</li>
-            <li></li>
             <li># 条件にあう分件が多い駅top10を表示(書き方難しかった)</li>
             <li>filter_top10_df = filter_df.groupby(['駅'])['駅'].count().sort_values(ascending=False).head(10)</li>
-            <li></li>
             <li># 続けるかどうかのフラグ</li>
             <li>flag = True</li>
             <li>while (flag):</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;print('あなたにおすすめの駅は')</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;print(filter_top10_df)</li>
-            <li></li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;# 　条件に合致する物件数が多い上位10の駅を「おすすめ駅」とする</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;# 絞り込んだ結果をさらに「おすすめ駅」で絞り込み(ここちょっと書き方難しい)</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;mask = filter_df['駅'].isin(filter_top10_df.index)</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;# filter_dfからおすすめ駅に絞り込んだ結果をfilter_top10_station_dfに入れる</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;filter_top10_station_df = filter_df[mask]</li>
-            <li></li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;# filter_top10_station_df.loc[:, "家賃"].hist(by=filter_top10_station_df.loc[:, "駅"],range=(rent_lower,rent_upper),bins=10,figsize=(8, 8))</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;# plt.show()</li>
-            <li></li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;# ヒストグラム-------------------------------------</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;#エラーが出たので山崎先生に教えてもらいました。</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;axes = filter_top10_station_df.loc[:, "家賃"].hist(by=filter_top10_station_df.loc[:, "駅"],</li>
@@ -173,41 +158,37 @@
             <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;figsize=(10, 8),</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sharex=True, sharey=True)</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;for ax in axes.reshape(-1):</li>
-            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ax.grid(b=True)  # グリッドを表示</li>
-            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ax.set_xlabel("家賃(万円)")  # 横軸のラベル</li>
-            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ax.set_ylabel("件数")  # 縦軸のラベル</li>
-            <li>&nbsp;&nbsp;&nbsp;&nbsp;plt.suptitle("おすすめ駅：家賃のヒストグラム（家賃制限内）")  # グラフ全体のタイトル</li>
-            <li>&nbsp;&nbsp;&nbsp;&nbsp;plt.subplots_adjust(top=0.92,  # グラフ位置の微調整</li>
-            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hspace=0.3)  # グラフ間の微調整</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ax.grid(b=True) # グリッドを表示</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ax.set_xlabel("家賃(万円)") # 横軸のラベル</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ax.set_ylabel("件数") # 縦軸のラベル</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;plt.suptitle("おすすめ駅：家賃のヒストグラム（家賃制限内）") # グラフ全体のタイトル</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;plt.subplots_adjust(top=0.92, # グラフ位置の微調整</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hspace=0.3) # グラフ間の微調整</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;plt.show()</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;# ------------------------------------------------------</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;print("おすすめ駅(10駅)物件数", len(filter_top10_station_df))</li>
-            <li></li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;station = input('駅名を入力してください')</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;# おすすめ駅Top10（filter_top10_station_df）から駅名で更に絞り込みfilter_selected_station_dfに入れる</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;mask = (filter_top10_station_df['駅'] == station)</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;filter_selected_station_df = filter_top10_station_df[mask]</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;print(station + "の合致物件数", len(filter_selected_station_df), "件")</li>
-            <li></li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;# 全件表示させるようにする</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;pd.set_option('display.max_rows', None)</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;pd.set_option('display.max_columns', None)</li>
-            <li></li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;# 選択した駅の駅、路線、家賃、名称、合計時間、URLを表示する</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;print(filter_selected_station_df[["駅", "路線","家賃", "名称", "合計時間", "URL"]].sort_values("家賃").to_string(index=False))</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;print("----------------------------------------------------------------")</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;loop_input = input("続けますか？ y or n")</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;if loop_input == 'n':</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flag = False</li>
-            <li></li>
             </ol></code>
-        </div>
+    </div>
 
         <br><br>
 
         <h2>使い方動画</h2>
         <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/3pWAHrn7FVk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/452xlGLVrNg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 </body>
 </html>
