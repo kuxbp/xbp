@@ -29,7 +29,7 @@ var student_list=[];
           
           var cell = document.createElement("td");
           var aTag = document.createElement("a");
-          aTag.href = student_list[i][1]+"de12/";
+          aTag.href = student_list[i][1]+"de34/";
           aTag.target='_blank';
           var cellText = document.createTextNode(student_list[i][0]);
           aTag.appendChild(cellText)
