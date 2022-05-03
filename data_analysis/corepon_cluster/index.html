@@ -27,7 +27,7 @@
 
     <h1>コレスポンデンス分析、クラスター分析</h1>
     ■ポジショニングと分類<br>
-    市場の中での自社製品、ブランドのポジションを把握したり、商品の分類を明確にすることによって、<br>
+    自社製品、ブランドのポジションを把握したり、商品の分類を明確にすることによって、<br>
     問題点が明確になったり、戦略を立てる手助けになったります。<br>
     また、定量的なデータがあることによって、自らの提案に合理性を付加することできます。<br><br>
     ■多変量解析<br>
@@ -60,27 +60,39 @@
     
     <h1 id="exercise">実際にやってみよう</h1>
     <h2>■テンプレを使った楽々モード</h2>
-    <h3>step1:テンプレを使ってアンケート</h3>
+    <h3>■■■step1:テンプレを使ってアンケート■■■</h3>
     <div>
-        1)5段階評価アンケートを使う場合<br>
+        --->5段階評価アンケートを使う場合<br>
         こちらの<a href="https://forms.office.com/Pages/ShareFormPage.aspx?id=_Sgqa42tDkib8xpKlRYd1YuR4-TsQaNHqczXaGaFmdhUM1Q3WTRINUlGRTA2V0FPQjE2MTVQSlJIQi4u&sharetoken=ypA5cWiRzSmgAyXPP7LL" target="_blank">テンプレート</a>
-        を使ってアンケートを作成し、結果のエクセルをダウンロードします。<br><br>
+        を使ってアンケートを作成します。<br>
+        <a href="https://youtu.be/Lcfq-c8Bt-w" target="_blank">アンケートの複製と編集動画</a><br>
+        <br>
         
-        2)YesNoアンケートを使う場合<br>
+        --->YesNoアンケートを使う場合<br>
         こちらの<a href="https://forms.office.com/Pages/ShareFormPage.aspx?id=_Sgqa42tDkib8xpKlRYd1YuR4-TsQaNHqczXaGaFmdhUQUFIMENNOThDRkpZRDJTQkpNMVQwR1hNVS4u&sharetoken=ypA5cWiRzSmgAyXPP7LL" target="_blank">テンプレート</a>
-        を使ってアンケートを作成し、結果のエクセルをダウンロードします。<br>
+        を使ってアンケートを作成しします。<br>
+        <a href="https://youtu.be/P18nCQLNt7I" target="_blank">アンケートの複製と編集動画</a><br>
         
     </div>
-    <h3>step2:クロス集計表を自動作成</h3>
+    <h3>■■■step2:結果をダウンロード■■■</h3>
     <div>
-        step1でダウンロードしたアンケート結果のエクセルを<br>
+        アンケート結果をエクセル形式でダウンロードします<br>
+        <a href="https://youtu.be/2m2Y1ekPP6Q" target="_blank">アンケートの回答をダウンロード動画</a><br>
+        
+    </div>
+    <h3>■■■step3:クロス集計表を自動作成■■■</h3>
+    <div>
+        step2でダウンロードしたアンケート結果のエクセルを<br>
         <a href="http://doyolab-cross-env.eba-nbz2ptvg.ap-northeast-1.elasticbeanstalk.com/" target="_blank">クロス集計アプリ</a> (doyolab)を使ってクロス集計します。<br>
-        結果のcsv(UTF-8)ファイルはcross.csvという名前でダウンロードされます。
+        結果のcsv(UTF-8)ファイルはcross.csvという名前でダウンロードされます。<br><br>
+
+        ５段階評価テンプレを使った場合は平均を選びます。<a href="https://youtu.be/4E6h8wspOuA" target="_blank">動画</a><br>
+        YesNoテンプレを使った場合は合計を選びます。<a href="https://youtu.be/AH5_cEO8TFQ" target="_blank">動画</a><br>
     </div>
 
-    <h3>step3:分析</h3>
+    <h3>■■■step4:分析■■■</h3>
     <div>
-        step2で作ったcross.csvを<br>
+        step3で作ったcross.csvを<br>
         <a href="http://doyolab-corepon-env.eba-wm9wapty.ap-northeast-1.elasticbeanstalk.com/" target="_blank">コレポン分析アプリ</a>(doyolab)に読み込むとコレスポンデンス分析の結果が表示されます。<br>
         <a href="https://doyolab.net/appli/cluster/" target="_blank">クラスター分析アプリ</a>(doyolab)に読み込むとコレスポンデンス分析の結果が表示されます。
         
@@ -92,10 +104,13 @@
     
     
     <h2>■独自のアンケート形式で行う場合</h2>
-    <h3>アンケート</h3>
-    独自にアンケートを行います。
+    <h3>step1:アンケート</h3>
+    <div>
+        独自にアンケートを行います。
+    </div>
+    
     <h3>step2:データファイル作成</h3>
-    <h4>step2-1:クロス集計表</h4>
+    <h3>step2-1:クロス集計表</h3>
     <div>
         エクセルを使って、アンケート結果を下図のようなクロス集計表にします。<br>
         集計値は平均値、カウントなどにしましょう<br>
@@ -103,7 +118,7 @@
         また、データも空白のセルをつくらずに必ず値を入力してください。<br>
         <br><img src="images/pic1.png" width="60%">        
     </div>
-    <h4>step2-2:csvファイル(UTF-8)で保存</h4>
+    <h3>step2-2:csvファイル(UTF-8)で保存</h3>
     <div>
         クロス集計表をcsvファイル(UTF-8)形式で保存します。<br>
         UTF-8形式のcsvファイルの作成の方法は<a href="http://doyolab.net/howtomake_utf8csv/" target="_blank">こちら</a> を参照してください。<br>
