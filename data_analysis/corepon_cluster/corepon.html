@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>コレスポンデンス分析</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="shortcut icon" href="../../images/xbp.ico">
+
+    </head>
+    
+<body onLoad="reloadCheck()">
+            <!-- 1回だけリロードします。<br> -->
+            <script type="text/javascript">
+                function reloadCheck()
+                {
+                    if (window.name != "reloadFlag")
+                {
+                    // alert("リロードしました");
+                    location.reload();
+                    window.name = "reloadFlag";
+                }
+                }</script>
+
+    <logotohome>
+    <a href="index.html"><img src="../../images/0_XBlogo.png" alt=""></a>
+    </logotohome>
+
+    <h1>コレスポンデンス分析</h1>
+    <div>
+        ■ポジショニング=消費者の心の中での位置<br>
+        コレスポンデンス分析はポジショニングを表現するために用いられる分析手法です。他にも因子分析、主成分分析などもポジショニング分析に用いられます。<br>
+        ポジショニングとは「消費者の『心の中』のどの位置にその商品があるか」です。<br>
+        それらを知るためには、たいていの場合は様々な印象が重なりあって、相対的に決まってくるものです。そうなると、どのように見せるかが非常に難しくなります。S
+    </div>
+    <div>
+        <br>例えば、高級感（高級感ーカジュアル）と値段（高価ー安価）という２項目でA〜E社の立ち位置を表現しようとすると、<br>
+        下記のように、縦軸に高級感、横軸に値段の散布図で簡単に表現することができます。<br>
+        (C社やD社は安価なのに高級感がありますね)<br>
+        このように2次元であれば、立ち位置を表現することは非常に簡単です。
+        <br>
+        <a href="images/corepon/corepon.006.jpeg"><img src="images/corepon/corepon.006.jpeg" width="50%"></a><br>
+        <br>しかし、価格や高級感以外の調査項目が増えたらどうでしょうか？<br>
+        例えば、品質、機能性、かわいさ、コスパなどです<br>
+        つまり、2次元より多い次元になってしまうと、紙や画面という2次元の媒体で１つの図で表現することは難しくなるのです。
+        <br>
+        <a href="images/corepon/corepon.007.jpeg"><img src="images/corepon/corepon.007.jpeg" width="50%"></a><br>
+        <br>コレスポンデンス分析はこのように多次元のデータを2次元の散布図で表現する手法です。クロス集計表があれば、分析できます。
+        <br>
+        <a href="images/corepon/corepon.009.jpeg"><img src="images/corepon/corepon.009.jpeg" width="50%"></a><br>
+
+        <h3>■■■散布図の読み方■■■</h2>
+        <a href="images/corepon/exp3.png"><img src="images/corepon/exp3.png" width="40%"></a>
+        
+        <a href="images/corepon/exp4.png"><img src="images/corepon/exp4.png" width="40%"></a>
+        <br>
+        <a href="images/corepon/exp2.png"><img src="images/corepon/exp2.png" width="40%"></a>
+        <a href="images/corepon/exp1.png"><img src="images/corepon/exp1.png" width="40%"></a>
+        <br>
+
+        <h3>■■■デメリット■■■</h2>
+            <ol>
+                <li>回答者の数などのサンプルサイズにおける大小が反映されない。 たとえば、「高級感がある」と答えた人が多くても少なくても、同じひとつの点として散布図に表記されてしまいます</li>
+                <li>うまく表現できていないことがある。累積寄与率という数値を見て、70％以上あると精度が高い、80%以上はかなり精度が高いと言われています。40%より低いと精度は低いです。<br>
+                ちなみにここまでお見せした例は、累積寄与率が28.06%とかなり低くなっており、あまり良い例とは言えません。
+                </li>
+            </ol>
+     
+    </div>
+
+    <h2>練習</h2>
+    <div>
+        <ol>
+            <li><a href="./data/cityall.csv" download="sample.csv">サンプルデータ</a>をダウンロードしましょう</li>
+            <li>サンプルデータを<a href="http://doyolab-corepon-env.eba-wm9wapty.ap-northeast-1.elasticbeanstalk.com/" target="_blank">コレポン分析アプリ</a>(doyolab)に読み込むとコレスポンデンス分析の結果が表示されます。<br>
+                <a href="https://youtu.be/EfHhpOCVheE" target="_blank">使い方動画</a>
+            </li>
+            <li>散布図と累積寄与率を見て、街のイメージのポジショニングについて、考察してみましょう。</li>
+        </ol>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>ポジションと分類</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="shortcut icon" href="../../images/xbp.ico">
+
+    </head>
+    
+<body onLoad="reloadCheck()">
+            <!-- 1回だけリロードします。<br> -->
+            <script type="text/javascript">
+                function reloadCheck()
+                {
+                    if (window.name != "reloadFlag")
+                {
+                    // alert("リロードしました");
+                    location.reload();
+                    window.name = "reloadFlag";
+                }
+                }</script>
+
+    <logotohome>
+    <a href="index.html"><img src="../../images/0_XBlogo.png" alt=""></a>
+    </logotohome>
+
+    <h1>コレスポンデンス分析、クラスター分析</h1>
+    ■ポジショニングと分類<br>
+    市場の中での自社製品、ブランドのポジションを把握したり、商品の分類を明確にすることによって、<br>
+    問題点が明確になったり、戦略を立てる手助けになったります。<br>
+    また、定量的なデータがあることによって、自らの提案に合理性を付加することできます。<br><br>
+    ■多変量解析<br>
+    コレスポンデンス分析やクラスター分析は多変量解析とよばる手法の一部で、それぞれは全く別物です。<br>
+    しかし、両方ともクロス集計表があれば分析ができる、マーケティングで用いられるという利用シーンが似ている<br>
+    という共通点があるため、同時に学んでみます。<br><br>
+    ■独自アプリで簡単に学ぶ<br>
+    これらの分析手法は計算が大変複雑なので、SPSSなど分析ソフトを使って行いますが、<br>
+    分析ソフトは高額かつ、そこそこ操作が難しいです。<br>
+    そこで、この授業では独自開発したwebアプリを使って分析プロセスを簡略化し、「計算プロセスではなく、分析プロセス」に主眼をおきます。<br>
+
+
+    <br>
+    <h2>コレスポンデンス分析</h2>
+    <div>
+        コレスポンデンス分析は、アンケート調査などのクロス集計結果を散布図にして見やすくする手法です。<br>
+        商品やブランドなどのポジショニングの表現などに使われます。<br>
+        コレスポンデンス分析の詳細と練習は<a href="./corepon.html" target="_blank">こちら</a><br>
+        <img src="images/corepon_ex_1.png" width="30%"><br>
+    </div>
+    
+    <h2>クラスター分析</h2>
+    <div>
+        クラスター分析は集団の中から似たものを集めてグループ（クラスター）を作って対象を分類するという方法です。<br>
+        商品やブランドなどの分類などに使われます。<br>
+        クラスター分析には、階層クラスター分析と非階層クラスター分析の2種類の方法がありますが、ここでは階層クラスター分析を扱います。<br>
+        クラスター分析の詳細と練習は<a href="./cluster.html" target="_blank">こちら</a><br>
+        <img src="images/hcluster_ex_1.png" width="30%"><br>
+    </div>
+    
+    <h2>■テンプレを使った楽々モード</h2>
+    <h3>step1:テンプレを使ってアンケート</h3>
+    <div>
+        こちらの<a href="https://forms.office.com/Pages/ShareFormPage.aspx?id=_Sgqa42tDkib8xpKlRYd1YuR4-TsQaNHqczXaGaFmdhUNVJZQUZET0tUUEozMEwzQkM1SFRXQUtCSi4u&sharetoken=ypA5cWiRzSmgAyXPP7LL" target="_blank">テンプレート</a>
+        を使ってアンケートを作成し、結果のエクセルをダウンロードします。<br>
+    </div>
+    <h3>step2:クロス集計表を自動作成</h3>
+    <div>
+        step1でダウンロードしたアンケート結果のエクセルを<br>
+        <a href="http://doyolab-cross-env.eba-nbz2ptvg.ap-northeast-1.elasticbeanstalk.com/" target="_blank">クロス集計アプリ</a> (doyolab)を使ってクロス集計します。<br>
+        結果のcsv(UTF-8)ファイルはcross.csvという名前でダウンロードされます。
+    </div>
+
+    <h3>step3:分析</h3>
+    <div>
+        step2で作ったcross.csvを<br>
+        <a href="http://doyolab-corepon-env.eba-wm9wapty.ap-northeast-1.elasticbeanstalk.com/" target="_blank">コレポン分析アプリ</a>(doyolab)に読み込むとコレスポンデンス分析の結果が表示されます。<br>
+        <a href="https://doyolab.net/appli/cluster/" target="_blank">クラスター分析アプリ</a>(doyolab)に読み込むとコレスポンデンス分析の結果が表示されます。
+        
+        <br><br>
+        <a href="https://youtu.be/EfHhpOCVheE" target="_blank">使い方動画</a>
+    </div>
+
+    <br><br><br><br>
+    
+    
+    <h2>■独自のアンケート形式で行う場合</h2>
+    <h3>アンケート</h3>
+    独自にアンケートを行います。
+    <h3>step2:データファイル作成</h3>
+    <h4>step2-1:クロス集計表</h4>
+    <div>
+        エクセルを使って、アンケート結果を下図のようなクロス集計表にします。<br>
+        集計値は平均値、カウントなどにしましょう<br>
+        クロス集計表は下記のような形で空白列を作らないように作ってください。<br>
+        また、データも空白のセルをつくらずに必ず値を入力してください。<br>
+        <br><img src="images/pic1.png" width="60%">        
+    </div>
+    <h4>step2-2:csvファイル(UTF-8)で保存</h4>
+    <div>
+        クロス集計表をcsvファイル(UTF-8)形式で保存します。<br>
+        UTF-8形式のcsvファイルの作成の方法は<a href="http://doyolab.net/howtomake_utf8csv/" target="_blank">こちら</a> を参照してください。<br>
+        神奈川大学の学生はOffice365を無料でダウンロードできます。詳しくは<a href="http://mns.kanagawa-u.ac.jp/2014/office365/office365.html" target="_blank">ここ</a>を参照してください。<br>
+
+        <a href="./data/cityall.csv" download="sample.csv">サンプルデータ</a>をダウンロードして、自分の集計結果を貼り付け上書き保存すると簡単です。 <br>
+        
+    </div>
+    <h3>step3:分析</h3>
+    <div>
+        step2で作ったcross.csvを<br>
+        <a href="http://doyolab-corepon-env.eba-wm9wapty.ap-northeast-1.elasticbeanstalk.com/" target="_blank">コレポン分析アプリ</a>(doyolab)に読み込むとコレスポンデンス分析の結果が表示されます。<br>
+        <a href="https://doyolab.net/appli/cluster/" target="_blank">クラスター分析アプリ</a>(doyolab)に読み込むとコレスポンデンス分析の結果が表示されます。
+        
+        <br><br>
+        <a href="https://youtu.be/EfHhpOCVheE" target="_blank">使い方動画</a>
+    </div>
+
+
+    
+
+
+
+</body>
+</html>

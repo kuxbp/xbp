@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>クラスター分析</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="shortcut icon" href="../../images/xbp.ico">
+
+    </head>
+    
+<body onLoad="reloadCheck()">
+            <!-- 1回だけリロードします。<br> -->
+            <script type="text/javascript">
+                function reloadCheck()
+                {
+                    if (window.name != "reloadFlag")
+                {
+                    // alert("リロードしました");
+                    location.reload();
+                    window.name = "reloadFlag";
+                }
+                }</script>
+
+    <logotohome>
+    <a href="index.html"><img src="../../images/0_XBlogo.png" alt=""></a>
+    </logotohome>
+
+    <h1>クラスター分析</h1>
+    <div>
+        クラスター分析はマーケティングなどで<br>
+        ブランドのポジショニング分析、顧客層の特性分け分析、商品構成の分析、商圏の特性分析など、分類が必要な場面で用いられる手法です。
+    </div>
+    <div>
+        階層クラスター分析は非常に簡単です。<br>
+        クロス集計表をクラスター分析にかけると、デンドログラム（樹形図）とよばれるトーナメント表のような図が出力されます。<br><br>
+        <a href="images/cluster/cluster_ex1.png"><img src="images/cluster/cluster_ex1.png" width="30%"></a><br>
+
+        アプリでは最大距離の70%のところに赤い線が引いてありますが、あくまで目安であって、自分が適切と思う位置で線をひき、<br>
+        その線とデンドログラムの交点にぶら下がっているものが同じグループ（クラスター）となります。<br>
+    </div>
+    <div>
+        デンドログラムをわかりやすいように回転して見てみましょう。<br>
+        下記のデンドログラムは、過去に学生がインスタ映えする食べ物写真を分類した際のものです<br>
+        赤い線で区切るとすると、4つのクラスターに分けることができます。<br>
+        <a href="images/cluster/cluster.001.jpeg"><img src="images/cluster/cluster.001.jpeg" width="50%"></a><br>
+        これだと、少し大雑把だなと感じたら、もう少し閾値を下げて青い線のところで線をひきます。<br>
+        そうすると、8つのクラスターに分類することができました。<br>
+        <a href="images/cluster/cluster.002.jpeg"><img src="images/cluster/cluster.002.jpeg" width="50%"></a><br>
+
+        <br><br>
+        青い線で区切ったクラスターで写真を分類してみると次のようになります。<br>
+        大体適切に分類されていますね。<br>
+        <a href="images/cluster/cluster.003.jpeg"><img src="images/cluster/cluster.003.jpeg" width="50%"></a><br>
+        
+        
+        
+
+        
+    </div>
+
+    <h2>練習</h2>
+    <div>
+        <ol>
+            <li><a href="./data/cityall.csv" download="sample.csv">サンプルデータ</a>をダウンロードしましょう</li>
+            <li>サンプルデータを<a href="https://doyolab.net/appli/cluster/" target="_blank">コレポン分析アプリ</a>(doyolab)に読み込むとクラスター分析の結果が表示されます。<br>
+                <a href="https://youtu.be/EfHhpOCVheE" target="_blank">使い方動画</a>
+            </li>
+            <li>クラスター分析で分けた結果とコレスポンデンス分析の結果を見比べて、考察してみましょう。</li>
+        </ol>
+    </div>
+
+</body>
+</html>
