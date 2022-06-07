@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>因子分析_補足資料</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="shortcut icon" href="../../images/xbp.ico">
+
+    </head>
+    
+<body onLoad="reloadCheck()">
+            <!-- 1回だけリロードします。<br> -->
+            <script type="text/javascript">
+                function reloadCheck()
+                {
+                    if (window.name != "reloadFlag")
+                {
+                    // alert("リロードしました");
+                    location.reload();
+                    window.name = "reloadFlag";
+                }
+                }</script>
+
+    <logotohome>
+    <a href=""><img src="../../images/0_XBlogo.png" alt=""></a>
+    </logotohome>
+
+
+    
+    <h1>因子分析の補足</h1>
+    <h2>1)共通性が１を超えたら、よろしくない</h2>
+    <div>
+        分析アプリで表示される、共通性の表を見て、１を超えているものがある場合は、実は不適な解とされています。<br>
+        授業で取り扱った例も、動画でちらっと述べたように、実は共通性が１を超えた観測変数がいくつかあり、適切な結果ではありませんでした。
+        <br>
+        <img src="./images/communalities.png" width="15%">
+        <br>
+
+        その場合、下記のことを確認してみてください。
+    </div>
+        <ol>
+            <li>相関の高い質問項目の片方を削除してみる<br>
+            分析に使ったクロス集計表を<a href="https://doyolab.net/appli/corr/">相関分析アプリ</a>にかけると、相関が高い質問項目がわかるので、<br>
+            相関が質問項目のどちらかを削除してみましょう。<br>
+            <img src="./images/soukan.png" width="15%"><br>
+            美しい、おもしろい、伝統を感じる、女性らしい、男性らしい、という形容詞はかなり様々なことを統合した結果の形容詞です。<br>
+            そのため、関連する他の形容詞と相関が高くなってしまいます。<br>
+            様々な解釈ができたり、様々な要素が統合された結果の形容詞の使用は気をつけましょう。
+            <br><br>
+            <br>
+            </li>
+            <li>因子数を変更してみる(アプリで因子数を指定するにチェックを入れて、因子の数字を入れてみる)<br>
+                <img src="./images/splot.png" width="40%">
+            <br>
+            
+            </li>
+        </ol>
+
+    <h2>２）累積寄与率が高いほうが良い</h2>
+    <div>
+        累積寄与率という表の一番右下の値は、抽出された因子で全体のどれくらいを表現できているかを示す値です。<br>
+        0.8の場合→その因子数で80%は表現できている。
+        <br>
+        数値は高い方が良い。
+        <br><br><br>
+        <img src="./images/kiyoritsu.png" width="40%">
+    </div>
+
+    
+
+    
+
+
+
+</body>
+</html>
