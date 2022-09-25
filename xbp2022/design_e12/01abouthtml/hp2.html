@@ -36,6 +36,13 @@
             というURLをブラウザに入力すると、その階層にあるindex.htmlを表示させます。
     
         </div>
+
+        <h2>ファイル名半角英数字(日本語禁止）</h2>
+        <div>
+            自分のホームページに使うファイル名は半角の英数字（アルファベットか数字）にするようにしてください。<br>
+            日本語だと不具合が出る場合があります。
+        </div>
+        
        
 
     <h1>２.テストページを編集してみる</h1>
@@ -72,12 +79,29 @@
                     画像を表示(40%)<br>
                     <img src="./images/testimage.png" width="40%"><br>
                 </xmp>
+                ■階層の理解<br>
+                「./」は同じ階層、「../」は一つ上の階層を意味します。<br>
+                VSCodeでは「./」や「../」と入力すると、フォルダやファイルの候補が表示されます。<br>
+                上の例では、編集しているファイル(test.html)はimagesフォルダと同じ階層にあるので、<br>
+                「./images」と書いているわけです。<br>
+                <img src="images/samplefolder1.png" width="40%"><br>
+                xbpフォルダの直下（de12と同じ階層）にも<br>
+                imagesフォルダがありますが、そのフォルダは「../images」となります。<br>
+                <br>
+                ■「/」は「中の」と読み替えてください。<br>
+                「/」は「中の」と読み替えてください。<br>
+                「./images/testimage.png」は「同じ階層の〈中の〉imagesフォルダの〈中の〉testimage.png」 <br>
+                という意味になります。
+                <br><br>
+                階層に関する上記のような表現は画像ファイル指定だけでなく、リンクなどhtmlのファイル指定の際に共通的な表現方法です。
 
             </div>
+            <br><br>
             <div>
-            画像を表示(30%)<br>
+            ■画像の表示倍率<br><br>
+            ブラウザの幅の30%にする場合「width="30%"」<br>
             <img src="./images/testimage.png" width="30%"><br>
-            画像を表示(40%)<br>
+            ブラウザの幅の40%にする場合「width="40%"」<br>
             <img src="./images/testimage.png" width="40%"><br>
             
             </div>
@@ -169,14 +193,14 @@
             <h2>Work⑥スタイルシートの設定</h2>
             <div>
                 <br>cssファイルはhtmlのいろんな書式を決めておいて、それを読み込めばタグごとの書式が反映されるファイルです。<br>
-                ■work⑥:headの部分でcssフォルダにあるstyle.cssをスタイルシートに設定してみましょう。<br><br>
-                h1.htmlからある行をコピペしてくればOKです<br>
-                
+                ■work⑥:headの部分でcssフォルダにあるstyle.cssをスタイルシートに設定してみましょう。<br>
+                headの部分に下記のように記述します。<br><br>
+                <xmp>
+                    <link rel="stylesheet" href="./css/style.css">
+                </xmp>
                 <br>スタイルシートの読み込みがうまくいけば、test.htmlの背景や右側の余白が整うはずです。
                 <br><br>
-                <xmp>
-                    <link rel="stylesheet" href="css/style.css">
-                </xmp>
+
                 【結果】
                 背景や右側の余白が整うはずです。
             </div>
