@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>デジタルフィールドノート</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="shortcut icon" href="../../images/xbp.ico">
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-35006480-4');
+        </script>
+    
+    </head>
+    
+<body onLoad="reloadCheck()">
+            <!-- 1回だけリロードします。<br> -->
+            <script type="text/javascript">
+                function reloadCheck()
+                {
+                    if (window.name != "reloadFlag")
+                {
+                    // alert("リロードしました");
+                    location.reload();
+                    window.name = "reloadFlag";
+                }
+                }</script>
+
+    <logotohome>
+    <a href="../../index.html"><img src="../../images/0_XBlogo.png" alt=""></a>
+    </logotohome>
+
+<h1>デジタルフィールドノート</h1>
+ <!-- <h2>リンク</h2> -->
+ <div>
+     <a href="https://doyolab.net/appli/digitalfieldnote_boston/" target="_blank">デジタルフィールドノート</a>は
+     動画資料にタグをつけて、<br>
+     ・グループによるインサイト（洞察）の質を向上させます。<br>
+     ・資料として、振り返りを容易にします。<br>
+
+     <img src="./top_img.png" width="85%" ><br><br>
+ </div>
+ 
+ <h2 id="feature">特徴</h2>
+ <ol>
+    <li>直感的なタグづけ<br>
+        直感的なタグ使って、動画を再生しながら簡単にタグづけができます。<br>
+        <img src="./tag.png"><br><br>
+     </li>
+     <li>タグづけしたシーンに簡単アクセス<br>
+        タグをクリックすることで、指定位置を簡単に再生できます。<br>
+        <img src="./memo_tag.png" ><br><br>
+    </li>
+     <li>再現性<br>
+        タグファイルと動画ファイルをセットで保存しておくことで、記録を簡単に呼び出せます。<br>
+        タグファイルはcsv形式です。<br>
+        <img src="./movie_tag.png" ><br><br>
+    </li>
+     <li>主要な動画形式をカバー<br>
+        mp4,movなど主要な動画形式を再生できます。<br>
+        <img src="./movie.png" ><br>
+    </li>
+    <li>インストール不要<br>
+        Webブラウザベースのシステムのため、インストールは不要です。<br>
+        <img src="./web_system.png" width="40%"><br><br>
+        <br>
+     </li>
+     <li>安全性<br>
+        動画やコメントはサーバーに送られることはないので、情報漏洩することはありません。<br>
+    
+        <br><br>
+     </li>
+ </ol>
+
+ <h2　id="notes">注意</h2>
+    <ul>
+        <li>
+            保存したtag.csvをエクセルで編集保存すると、csvで保存しても読み込まれなくなるので、注意してください。<br>
+            編集したい場合はテキストエディタ等で編集してください。<br>
+        </li>
+        <li>
+            ダウンロードされたtag.csvのファイル名は変更しても構いません。（プロジェクト.csvなど）
+        </li>
+    </ul>
+     
+     
+
+
+ <h2>使い方動画</h2>
+ <div>
+    動画では以前のバージョンを使っているため、見た目は異なりますが、使い方は同じです。<br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/-HrZWfgdCjQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+ </div>
+</body>
+</html>
