@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>デザイン演習Ⅲ・Ⅳ</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="shortcut icon" href="../../images/xbp.ico">
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'UA-35006480-4');
+    </script>
+    
+    </head>
+    
+<body onLoad="reloadCheck()">
+            <!-- 1回だけリロードします。<br> -->
+            <script type="text/javascript">
+                function reloadCheck()
+                {
+                    if (window.name != "reloadFlag")
+                {
+                    // alert("リロードしました");
+                    location.reload();
+                    window.name = "reloadFlag";
+                }
+                }</script>
+    <logotohome>
+    <a href="index.html"><img src="images/0_XBlogo.png" alt=""></a>
+    </logotohome>
+    <h1>デザイン演習Ⅲ・Ⅳ</h1>
+        <h2>最初の授業の前にやっておくこと</h2>
+        <div>
+            <a href="https://qiita.com/doyodoyo/private/ea07b241452833a82c8a" target="_blank">ここ</a>を参考に、２年次のデザイン演習のWebページを授業開始前に作っておいてください。<br>
+            フォルダ名を指定しているので、気をつけてください。デザインは独自にカスタマイズしたり、web上の無料テンプレートを使ったりしてください。
+
+        </div>
+        <h2>授業内容</h2>
+        <div>
+        <table border="1" cellspacing="0" cellpadding="10">
+            <tbody>
+            <tr>
+                <th>回</th><th>日付</th><th>内容</th><th>担当</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>4/10</td>
+                <td>
+                    IoTサービス<br>
+                    データの流れ、サーバー、フロントエンド、バックエンド<br>
+                    サーキュラーエコノミー<br>
+
+                    <!-- <a href="./01_arduino.html" target="_blank">マイコンボードの基礎</a><br>
+                    Assignment1:本日のまとめ、課題をHPにドキュメンテーションしておく<br>
+                    Assignment2:日常の中の負、正の感情のシチュエーションをリスト化しておく<br>
+                    <ul>
+                        <li>負：いやだなぁ、つらいなぁ、つまんないなぁ、など減ってほしいこと</li>
+                        <li>正：楽しいな、うれしいな、など増えてほしいこと</li>
+                    </ul>     -->
+                </td>
+                <td>道用</td>
+                
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>4/17</td>
+                <td>
+                    デザインリサーチ1<br>
+                    デジタルフィールドノート<br>
+                    もったいないな、こんなサービスあったら便利だな、どんな時に不便を感じるか
+
+                    <!-- 
+                    光を操る＆商品・サービス企画設計(デザイン思考)<br>
+                    <a href="./02_manipulate_the_light.html">光を操る</a><br>
+                    Assignment1:本日授業中に作ったプログラムをHPにアップしておく<br>
+                    Assignment2:グループワークのまとめ（ポストイットと説明）と
+                    <a href="https://kuxbp.github.io/xbp/data_fab/files/POV.pdf" target="_blank">POV</a>を作成してHPにアップしておく<br> -->
+                </td>
+                <td>道用</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4/24</td>
+                <td>
+                    デザインリサーチ2<br>
+                    POV、ポジショニング
+                    <!-- 動きを操る＆商品・サービス企画設計(デザイン思考）<br>
+                    <a href="./02_manipulate_the_movement.html">動きを操る</a><br>
+                    Assignment1:本日授業中に作ったプログラムをHPにアップしておく<br>
+                    Assignment2:グループワークのまとめ（HMWとYes,and）のIdiationの部分をHPにアップしておく -->
+                </td>
+                <td>道用</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5/8</td>
+                <td>
+                    <!-- コレスポンデンス分析,クラスター分析<br>
+                    <a href="../../data_analysis/corepon_cluster/index.html" target="_blank">コレスポンデンス分析,クラスター分析サイト（doyolab)</a>
+
+                    
+                    <br><br>
+                    ■課題：神奈川名産100選の食品(加工食品or農林水産品)のブランド調査と施策策定<br>
+                    <div>神奈川県の名産のブランド調査を行います。他県の有名なものと比較して、どのようなポジション、分類にあるかを分析し、それらの問題点を指摘し、それらを売り出す施策を考えます。
+                        <br><br>神奈川名産100選<a href="../../data_analysis/data/kanagawa_meisan_100sen.csv"  download="kanagawa_meisan_100sen.csv">データ</a>
+                    </div>
+                    <ol>
+                        <li>神奈川名産100選の中から対象を　加工食品 or 農林水産品 のどちらにするか決める</li>
+                        <li>神奈川名産100選の中から興味のあるものをいくつかピックアップする（１で決めた分類のもの）<br>特徴が異なるもの、特徴が似ているもの、同じカテゴリーのもの、有名なもの、無名なものなどある程度バラけるように</li>
+                        <li>神奈川県以外の有名なものをいくつか探す（１で決めた分類のもの）<br>特徴が異なるもの、特徴が似ているもの、同じカテゴリーのもの、有名なもの、無名なものなどある程度バラけるように</li>
+                        <li>調べたい項目をいくつか決める</li>
+                        <li><a href="../../data_analysis/corepon_cluster/index.html#exercise" target="_blank">手順</a>を参考にグループでアンケートを作成し、URLを共有し、5/23までにデータを集めておく。</li>
+                    </ol>
+                    ■Assignment<br>
+                    <div>できるだけ沢山の人にアンケートに協力してもらう。20人以上</div> -->
+                </td>
+                <td>道用</td>
+            </tr>
+            <tr>
+                
+                <td>5</td>
+                <td>5/15</td>
+                <td>
+                    <!-- Vison・Purpose開発とビジネス変革<br>遅刻しない<br>付箋を持ってくる -->
+                </td>
+                <td>
+                    <!-- ゲスト講師：高橋舞さん（電通） -->
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>5/22</td>
+                <td>
+                    <!-- ブランド調査と施策・発表会<br>
+                    ■Assignment
+                    <div>
+                        <li>cros.csvをHPにアップしておく。<br>リンクにdownload属性を設定しておくとダウンロードしやすい。<a href="https://gray-code.com/html_css/setting-link-for-file-download/" target="_blank">(参考外部リンク)</a></li>
+                        <li>発表資料(pdf)をHPにアップしておく。</li>
+                        
+                    </div> -->
+
+                </td>
+                <td>道用</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>5/29</td>
+                <td>
+                    <!-- IoTの基礎<br>
+                    <a href="https://qiita.com/doyodoyo/private/009c1546dc8fa3b80fc2" target="_blank">導入</a><br>
+                    <a href="https://qiita.com/doyodoyo/private/a59d4585ca02ded6073c" target="_blank">IoTの準備</a><br>
+                    <a href="https://qiita.com/doyodoyo/private/a1844331251c6208b13b" target="_blank">Python→IoTサーバー</a><br>
+                    <a href="https://qiita.com/doyodoyo/private/e942eb48887258ff1872" target="_blank">Arduino→Python</a><br>
+                    <a href="https://qiita.com/doyodoyo/private/3045c9aa98f794abc5b0" target="_blank">Arduino→Python→IoTサーバー</a><br>
+                    <a href="https://qiita.com/doyodoyo/private/e42087e7f7f99a7dfe60" target="_blank">IoTサーバー→Python→Arduino</a>
+                    <br> -->
+                </td>
+                <td>道用</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>6/5</td>
+                <td>
+                    <!-- IoTサービスプロトタイピング<br><br>
+                    IoTの特徴を活かした製品＆サービスを作ってください。IoTの特徴とは例えば
+                    <ul>
+                        <li>データを収集し、後にAIに利用できる</li>
+                        <li>遠隔で操作ができる</li>
+                        <li>データの共有できる</li>
+                        <li>複数の端末を操作できる</li>
+                        <li>複数の人が操作できる</li>
+                    </ul>
+                    などで、このような特徴により、新しいモノと人間の関係を作り出して欲しいです。<br>
+                    <br>
+                    <a href="https://doyolab.net/data/aguri.pdf" target="_blank">先輩の例</a>
+                    <br>
+                    ■Assignment
+                    <ul>
+                        <li>プロジェクトマネジメント（スケジュール、役割）、作ろうと思っているものをまとめて、アップしておく</li>
+                        
+                    </ul>
+                    <br> -->
+
+                </td>
+                <td>道用</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>6/12</td>
+                <td>
+                    <!-- IoTサービスプロトタイピング -->
+                </td>
+                <td>道用</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>6/19</td>
+                <td>
+                    <!-- IoTサービスプロトタイピング -->
+                </td>
+                <td>道用</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>6/26</td>
+                <td>
+                    <!-- IoTサービスプロトタイピング -->
+                </td>
+                <td>道用</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>7/3</td>
+                <td>
+                    <!-- IoTサービスプロトタイピング -->
+                </td>
+                <td>道用</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>7/10</td>
+                <td>
+                    <!-- IoTサービスプロトタイピング -->
+                </td>
+                <td>道用</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>7/17</td>
+                <td>
+                    <!-- IoTサービスプロトタイプ発表会 -->
+                </td>
+                <td>道用</td>
+            </tr>
+            </tbody> 
+          </table>
+
+
+
+
+        </div>
+        <!-- <h2>授業録画</h2>
+        <div>
+            <a href="https://web.microsoftstream.com/channel/e1bb75e5-0556-4874-b95e-cf127fd07827">録画チャンネル</a><br>
+            ビデオは定点カメラで録画したもので、今年度限りの措置です。<br>
+            この授業は演習なので、その場で手、体、頭を動かすことに重点を置いています。<br>
+            あくまでワクチン接種等で欠席した際の最低限の内容の把握のためであると考えてください。<br>
+        </div> -->
+        
+        <h2>受講者ページ</h2>
+        <div id="studentlink">
+            自分が申請したニックネームを表示
+            <script src="./link/table.js"></script>
+        </div>
+        <br><br><br>
+
+<br>
+<br>
+
+
+</body>
+</html>
