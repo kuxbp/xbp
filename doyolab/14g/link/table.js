@@ -6,7 +6,6 @@ var student_list=[];
     req.onload = function ( event ) {
       var txt=req.responseText;
       var line=txt.split("\n");
-
       for(let i=0;i<line.length;i++){
         var v=line[i].split(",");
         student_list[i] = v;
@@ -29,7 +28,13 @@ var student_list=[];
           
           var cell = document.createElement("td");
           var aTag = document.createElement("a");
-          aTag.href = student_list[i][1]+"doyolab/";
+          
+          if (student_list[i][2]==1){
+            aTag.href = student_list[i][1] + "doyolab/";
+          }else{
+            aTag.href = student_list[i][1];
+          }
+          
           aTag.target='_blank';
           var cellText = document.createTextNode(student_list[i][0]);
           aTag.appendChild(cellText)
@@ -59,6 +64,11 @@ var student_list=[];
     
       
     }
+
+    
+
+
+
 
 
 
