@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="jp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>プロジェクトノート</title>
+    
+    <link rel="stylesheet" href="main.css">
+</head>
+
+
+<body>
+    <!--ホームに帰るためのボタン-->
+    <logotohome>
+    <img src="./image/IMG_8627.jpeg" alt="">
+    </logotohome>
+
+    <!--h1は見出し１（大見出し）-->
+    <h1>Nekobo Project Note</h1><br><br>
+    <div>
+        <img src = "./image/start.png" width="60%"><br>
+    </div>
+   <h2>概要</h2>
+   <div>
+    ネコって癒されますよね〜。でも一人暮らしのアパートではネコは飼えなし。。。<br>
+    ネコの癒してくれる部分だけを都合よく抽出したデバイスがあったら、コロナ禍で人と会えなくなった人々を癒してくれるはず。<br>
+
+    Nekoboは人の表情を読み取って、鳴き声を変えて、甘えてくれたり、ほっといてくれたりする、癒しロボットです。<br>
+   </div>
+   <h2>プロセスメモ</h2>
+   
+   <div>
+    ■は考えないといけないこと、疑問等<br>
+    ●は具体的にやること<br>
+
+    →はやったこと<br><br>
+    <br>
+    ■感情の認識（プログラミング）
+    <ul>
+        <li>■カメラ使えるマイコンボードってあるの？<br>
+        →ラズパイなら大丈夫そう<br>
+        →●ラズパイとラズパイ用カメラを購入せねば<br>
+        → 購入！ラズパイ高い！！<br>
+        <img src="./image/camera.jpeg" width="15%">
+        </li>
+        <li>■読み込んだとして、どうやって表情を判断する？つらい時、<font color="#FF99CC">甘えて</font>欲しい<br>
+        →インターネット経由でマイクロソフトのAPIを利用すれば、表情の画像から人の感情を読み取ってくれそう<br>
+        →やっぱり有料。。。でも無料期間が結構長い！無料期間のうちに完成させる！<br>
+        ●ラズパイに書き込むpythonのプログラミング<br>
+        →できた。 <font color="#FFCC33">①笑う</font>
+        <font color="#00CCFF">②悲しい</font>
+        <font color="#FF3300">③怒る</font>
+        に加えて
+        <font color="#339900">④普通の時</font>
+        <font color="#FF3399">⑤あたふたしている時</font>
+        <font color="#CCCCFF">⑥驚いている時</font>
+        <font color="#33FFFF">⑦悩んでいる時</font>
+        の表情を識別できた！！<br>
+        先生ありがとう！<a href="https://qiita.com/doyodoyo/items/bb0f20a1076fce9a8de6" target="_blank">やり方</a>
+        
+        </li>
+    </ul>
+
+    ■外観
+    <ul>
+        <li>■ネコの形<br>
+        →大体の形は3Dプリンターかな？あとはネコ感は他の素材で出そう<br>
+        ●3Dモデリング<br>
+        →3Dプリンターでつくった<br>
+        →<img src="./image/3dp.png" width="15%"><br>
+        </li>
+        <li>●<font color="#FF99CC">ふわふわ感</font>をだす素材を購入する<br>
+        →この素材良さげ<br>
+        <img src="./image/neko1.jpeg" width="15%"><br>
+        3Dプリンターで大体の形を作って、貼っつけたる<br>
+        →ボンドでくっつかんかった(T_T)<br>
+        ●別の素材を探す<br>
+        →フェルトが良さげ<br>
+        <img src="./image/flt.jpeg" width="15%"><br>
+        →できたー！！<br>
+        <img src="./image/neko13.jpeg" width="30%"><br>
+        </li>
+    </ul>
+    ■鳴き声、動作
+    <ul>
+        <li>■動かす？光らせる？<br>
+        →動かしたいけど壮大だから、とりあえずペンディング<br>
+        →光らすと動物感より、ロボット感強くなった。→光らせるのやめっ！<br>
+        </li>
+        <li>■鳴き声はどうやって集める？<br>
+            →フリー素材発見 <a href="https://soundeffect-lab.info/sound/animal/" target="_blank">効果音ラボ</a>、<a href="https://pocket-se.info/archives/tag/%E7%8C%AB/" target="_blank">Pocketsound</a>
+        </li>
+        <li>スピーカー出力<br>
+        →ラズパイとpythonでmp3を再生できるけど、ラズパイにスピーカーついとらん。購入。。。。<br>
+        ●音声ファイルのプログラミング<br>
+        →できた！<a href="https://qiita.com/doyodoyo/items/e0aa9b7c89e1e66cf281">やり方</a>
+        <br>
+        ●あとは表情と組み合わせて分岐するプログラムをつければOK<br>
+        →できた！
+        </li>
+    </ul>
+
+    ●名前をつける<br>
+    →Nekoboとなずけた。
+   </div>
+   
+
+
+
+    <h3>
+    
+    <h2>完成</h2>
+    <h3>使ったもの</h3>
+    <div>
+        <ol>
+            <li>
+                <a href="https://www.amazon.co.jp/s?k=%E3%83%A9%E3%82%BA%E3%83%91%E3%82%A4+pi4&__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=1EDP2GL8N6BHW&sprefix=%E3%83%A9%E3%82%BA%E3%83%91%E3%82%A4+pi%2Caps%2C165&ref=nb_sb_noss_2" target="_blank">ラズパイ Pi4 ModelB 4GB</a>
+            </li>
+            
+            <li><a href="https://www.pc-koubou.jp/magazine/17276" target="_blank">ラズパイのカメラモジュール</a></li>
+            <li><a href="https://www.amazon.co.jp/ROUNDS-%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%96%E3%83%AB%E3%82%B9%E3%83%94%E3%83%BC%E3%82%AB%E3%83%BC-%E6%97%A5%E6%9C%AC%E4%BA%BA%E3%81%AB%E3%82%88%E3%82%8B%E4%BC%81%E7%94%BB%E3%83%BB%E5%AF%BE%E5%BF%9C-%E3%82%BF%E3%83%96%E3%83%AC%E3%83%83%E3%83%88%E7%94%A8%E3%82%B9%E3%83%94%E3%83%BC%E3%82%AB%E3%83%BC-%E3%83%A2%E3%83%90%E3%82%A4%E3%83%AB%E3%82%B9%E3%83%94%E3%83%BC%E3%82%AB%E3%83%BC/dp/B07DTCTHFK/ref=sr_1_18?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=RRV6CXRJUY3N&keywords=%E3%83%A9%E3%82%BA%E3%83%91%E3%82%A4+%E3%82%B9%E3%83%94%E3%83%BC%E3%82%AB%E3%83%BC&qid=1684721296&sprefix=%E3%83%A9%E3%82%BA%E3%83%91%E3%82%A4+%E3%82%B9%E3%83%94%E3%83%BC%E3%82%AB%E3%83%BC%2Caps%2C161&sr=8-18" target="_blank">スピーカー
+                （これ系の安いやつ）</a></li>
+            <li>フェルト生地</li>
+        </ol>
+    </div>
+    <h3>紹介動画</h3>
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/igRwq9U1b4g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    <br><br><br><br>
+    </div>
+     
+
+     
