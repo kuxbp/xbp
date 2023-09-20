@@ -30,9 +30,9 @@ var student_list=[];
           var aTag = document.createElement("a");
           
           if (student_list[i][2]==1){
-            aTag.href = student_list[i][1] + "digi_fab/";
-          }else{
             aTag.href = student_list[i][1];
+          }else{
+            aTag.href = student_list[i][1] + "digi_fab/";
           }
           
           aTag.target='_blank';
