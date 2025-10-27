@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>3DPrinting</title>
+    <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="shortcut icon" href="../../images/doyolab.ico">
+</head>
+<body>
+    <logotohome>
+    <a href="index.html"><img src="../../../images/doyolab.png" alt=""></a>
+    </logotohome>
+
+    <h2>Step0-3Dプリントまでの基本的な流れ</h2>
+        <ol>
+            <li>3Dモデリング</li>
+            <li>stlファイルとして保存</li>
+            <li>g-codeに変換</li>
+            <li>g-codeファイルを使って3Dプリンターに出力</li>
+        </ol>
+    
+    <h2>Step1-3Dモデリング</h2>
+    <div>
+        3DCADの操作<br>
+        <a href="https://www.youtube.com/playlist?list=PLEmSRK6wIlJywRTsU1t3BlTr_108xlGNB" target="_blank">Fusion360の操作</a>(先輩たちが作ってくれたサイト)<br>
+        <br>
+        <a href="https://www.youtube.com/channel/UC-hTA3j1L9acNiaQrvh0S6w" target="_blank">YouTube:メイカーズラブ</a>（外部サイト）<br>
+        <a href="https://www.youtube.com/channel/UCFKi31abDzn_bcYiguWsMxA/videos?app=desktop" target="_blank">YouTube初心者向けFusion360解説</a>（外部サイト）<br>
+        
+    </div>
+    <h2>Step2-stlファイルとして保存</h2>
+    <div>
+        Fusion360で作った3Dモデルを3Dプリンターで出力すためには<br>
+        まず、モデリングしたモデルをstlファイルという一般的な3Dモデルのファイルとして保存します。<br><br>
+        <a href="https://youtu.be/pW4nVFQHRmk">Fusion360で作った形をstlファイルに出力する方法</a><br>
+    </div>
+    
+    <h2>Step3-g-codeに変換</h2>
+    <div>
+        stlファイルは3Dモデルのファイルです。<br>stlファイルをもとに一層ずつに分解して積み重ねていく命令に変換されたものがg-codeファイルです。<br>
+        つまり、g-codeとは3Dプリンターに動きを指示する指示書のようなファイルですね。<br>
+        3Dプリンターによってサイズなどが異なるため、g-codeファイルは使う3Dプリンターに合わせて作る必要があります。<br><br>
+        
+        <a href="https://youtu.be/RkV_mayAYxE" target="_blank">Curaのインストール方法</a>（ダウンロードサイトは<a href="https://ultimaker.com/ja/software/ultimaker-cura" target="_blank">こちら software→Ultimaker Cura</a>）<br>
+        <a href="https://youtu.be/S2DKjDDDvds" target="_blank">Curaのプリンター設定と日本語化</a><br>
+        <!-- <a href="https://youtu.be/uqh8tC0-ntM?t=41" target="_blank">stlファイルをg-codeファイルに変換する方法</a><br> -->
+        <a href="https://youtu.be/KQs7kV_cjIM?si=MR59gT6-KwHctkGt" target="_blank">stlファイルをg-codeファイルに変換する方法（3:18まで）</a><br>
+        →※動画の中で3Dデータと言っているものがstlファイル、保存したファイルがg-codeデータです。<br>
+    </div>
+    <h2>Step4-3Dプリンターで出力</h2>
+    <div>
+        g-codeファイルを持ってファブラボへGo!　ファブラボスタッフの方が3Dプリント方法を教えてくれます。<br>
+        （設定を変える必要があるかもしれないので、stlファイルも一緒に持ってきましょう）<br>
+        
+        <a href="https://youtu.be/KQs7kV_cjIM?si=qNeIauY1AN5_KO_a&t=199" target="_blank">3Dプリンターの使い方（3:19〜）</a><br>
+        <a href="https://www.youtube.com/watch?v=omT6bh0_yiI" target="_blank">3Dプリンターのメンテナンス手順</a>
+        
+ 
+    </div>
+    <h2>安全上の注意</h2>
+    <div>
+        <ul>
+            <li>3Dプリンターは比較的安全な工作機です。素材がでてくるノズル近辺は200℃前後になっているので、プリント中は触らないでください。<br>
+            <img src="../../../data_fab/images/attention.jpg" width="30%">
+            </li>
+            <li>プリント終了後に印刷物がテーブルから剥がれない場合、スクレーバーという刃物を使って剥がします。<br>
+            スクレーバーは刃物なので、絶対に進行方向に手や体を行いようにしましょう。【大怪我】につながります。<br>
+            <img src="../../../data_fab/images/attention_3dp_NG.jpeg" width="50%"><br>
+            <img src="../../../data_fab/images/attention_3dp_OK.jpeg" width="50%">
+            </li>
+        </ul>
+        
+    </div>
+        
+
+</body>
+</html>
