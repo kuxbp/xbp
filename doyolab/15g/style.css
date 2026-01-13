@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+/* ---- フォント: 軽さ優先でシステムフォント ---- */
+html, body {
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                 "Helvetica Neue", Arial, "Noto Sans JP", "Hiragino Sans",
+                 "Yu Gothic UI", "YuGothic", sans-serif;
+    color: #181818;
+    margin: 0;
+    padding: 0;
+    background: #fafafa;
+}
+
+/* 既存 a の色はブランドカラーとして継承 */
+a {
+    color: #F8485E;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* 余白の付け方をリセット */
+h1, h2, h3, p, ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+/* ページコンテナ */
+.page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 80px 20px 60px;
+}
+
+/* ロゴ画像（既存タグ名対応を残しつつclassも追加） */
+logo img,
+logotohome img,
+.brand-logo {
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+}
+
+/* サイトヘッダー */
+.site-header {
+    border-bottom: 1px solid #e5e5e5;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.site-header-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.brand {
+    display: flex;
+    align-items: center;
+}
+.brand-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+.brand-name {
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #444;
+}
+
+/* ナビ */
+.site-nav {
+    display: flex;
+    gap: 18px;
+    font-size: 13px;
+    text-transform: lowercase;
+}
+.site-nav a {
+    color: #777;
+}
+.site-nav a:hover {
+    color: #F8485E;
+    text-decoration: none;
+}
+
+.section {
+    margin-top: 40px;
+}
+.section-title {
+    font-size: 18px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: 16px;
+}
+.section-intro {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+/* カードグリッド */
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.link-card {
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #eee;
+    padding: 16px 18px;
+    display: block;
+    transition: transform 0.15s ease, box-shadow 0.15s ease,
+                border-color 0.15s ease;
+}
+.link-card h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+    color: #222;
+}
+.link-card p {
+    font-size: 13px;
+    color: #666;
+}
+
+.link-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.05);
+    border-color: #F8485E33;
+    text-decoration: none;
+}
+
+.members-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.members-table td {
+    padding: 6px 4px;
+    font-size: 13px;
+}
+.members-table a {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid #eee;
+    background: #ffffff;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+.members-table a:hover {
+    background: #F8485E;
+    border-color: #F8485E;
+    color: #ffffff;
+}
+
+.site-footer {
+    border-top: 1px solid #e5e5e5;
+    padding: 12px 20px 24px;
+    text-align: center;
+    font-size: 11px;
+    color: #999;
+    background: #ffffff;
+}
